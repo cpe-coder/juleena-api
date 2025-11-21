@@ -10,6 +10,9 @@ export const createUserSchema = {
     role: true,
     first_name: true,
     last_name: true,
+    password_hash: true,
+    last_login_at: true,
+    email_verified_at: true,
   }),
   response: userSchemaOpenApi,
 };

@@ -11,28 +11,14 @@ export const UserRoleType = {
   USER: 'USER',
 } as const;
 export type UserRoleType = (typeof UserRoleType)[keyof typeof UserRoleType];
-export type feature_flags = {
-  id: Generated<string>;
-  created_at: Generated<Timestamp>;
-  updated_at: Generated<Timestamp>;
-  deleted_at: Timestamp | null;
-  role: UserRoleType;
-  json: unknown;
-};
-export type products = {
-  id: Generated<string>;
-  created_at: Generated<Timestamp>;
-  updated_at: Generated<Timestamp>;
-  deleted_at: Timestamp | null;
-  name: string;
-  description: string | null;
-  price: number;
-  user_id: string;
-};
+
 export type users = {
   id: Generated<string>;
   created_at: Generated<Timestamp>;
   updated_at: Generated<Timestamp>;
+  last_login_at: Timestamp | null;
+  email_verified_at: Timestamp | null;
+  password_hash: string;
   deleted_at: Timestamp | null;
   first_name: string | null;
   last_name: string | null;
@@ -40,7 +26,5 @@ export type users = {
   role: Generated<UserRoleType>;
 };
 export type DB = {
-  feature_flags: feature_flags;
-  products: products;
   users: users;
 };

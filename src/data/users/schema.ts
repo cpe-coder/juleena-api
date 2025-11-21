@@ -14,14 +14,23 @@ export const userSchemaObject = {
   deleted_at: z.union([z.coerce.date(), z.string()]).nullable().openapi({
     example: null,
   }),
+  last_login_at: z.union([z.coerce.date(), z.string()]).nullable().openapi({
+    example: null,
+  }),
+  email_verified_at: z.union([z.coerce.date(), z.string()]).nullable().openapi({
+    example: null,
+  }),
   email: emailSchema.openapi({
-    example: 'bossROD@gmail.com',
+    example: 'johndoe@gmail.com',
+  }),
+  password_hash: z.string().min(1).openapi({
+    example: '$2a$12$yTQo4XF4faeQdFg8gQBy0eYhqn/ZfZJ9OYRZK10h62Gzjsr9pdRyK',
   }),
   first_name: z.string().nullable().openapi({
-    example: 'boss',
+    example: 'JOHN',
   }),
   last_name: z.string().nullable().openapi({
-    example: 'ROD',
+    example: 'DOE',
   }),
   role: z.nativeEnum(UserRoleType).openapi({
     example: UserRoleType.USER,
