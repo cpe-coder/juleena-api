@@ -55,7 +55,7 @@
     "chalk": "^5.6.2",
     "dayjs": "^1.11.19",
     "daysjs": "^1.0.2",
-    "dotenv": "^17.2.3",
+    "dotenv": "^16.4.5",
     "hono": "^4.10.6",
     "http-status-codes": "^2.3.0",
     "kysely": "^0.28.8",

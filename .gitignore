@@ -8,6 +8,8 @@
 .idea/usage.statistics.xml
 .idea/shelf
 
+
+
 # deps
 node_modules/
 
@@ -28,3 +30,20 @@ lerna-debug.log*
 .DS_Store
 
 /src/generated/prisma
+
+node_modules/
+dist/
+coverage/
+volumes/
+.sst/
+
+*-lock.json
+*.lock
+
+.env
+.env.*
+.env-*
+!**.example
+
+.DS_Store
+*.tsbuildinfo

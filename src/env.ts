@@ -5,7 +5,7 @@ import { STAGES } from './constants/env.js';
 config();
 
 export function isTest() {
-  return process.env.NODE_ENV === 'dev';
+  return process.env.NODE_ENV === 'dev' || process.env.NODE_ENV === 'test';
 }
 
 const envSchema = z.object({

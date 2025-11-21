@@ -5,8 +5,9 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-kysely"
+  output   = "../src/db"
+  fileName = "types.ts"
 }
 
 datasource db {
@@ -23,13 +24,13 @@ enum UserRoleType {
 }
 
 
-model user {
+model users {
   id                String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   email             String    @unique
   password_hash     String
   firstName         String
   lastName          String
-  role              UserRoleType @default(user)
+  role              UserRoleType @default(USER)
   created_at        DateTime     @default(now()) @db.Timestamptz(6)
   updated_at        DateTime     @default(now()) @db.Timestamptz(6)
   deleted_at        DateTime?    @db.Timestamptz(6)
