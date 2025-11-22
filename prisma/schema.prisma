@@ -26,14 +26,13 @@ enum UserRoleType {
 
 model users {
   id                String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  email             String    @unique
-  password_hash     String
-  firstName         String
-  lastName          String
+  email             String       @unique
+  first_name        String?
+  last_name         String?
   role              UserRoleType @default(USER)
   created_at        DateTime     @default(now()) @db.Timestamptz(6)
   updated_at        DateTime     @default(now()) @db.Timestamptz(6)
   deleted_at        DateTime?    @db.Timestamptz(6)
-  last_login_at     DateTime?
-  email_verified_at DateTime?
+  last_login_at     DateTime?    @db.Timestamptz(6)
+  email_verified_at DateTime?    @db.Timestamptz(6)
 }

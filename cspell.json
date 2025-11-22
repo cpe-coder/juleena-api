@@ -19,6 +19,7 @@
     "openapi",
     "PGADMIN",
     "pino",
+    "pkey",
     "unarchived"
   ],
   "ignorePaths": [

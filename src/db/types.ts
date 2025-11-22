@@ -11,19 +11,17 @@ export const UserRoleType = {
   USER: 'USER',
 } as const;
 export type UserRoleType = (typeof UserRoleType)[keyof typeof UserRoleType];
-
 export type users = {
   id: Generated<string>;
-  created_at: Generated<Timestamp>;
-  updated_at: Generated<Timestamp>;
-  last_login_at: Timestamp | null;
-  email_verified_at: Timestamp | null;
-  password_hash: string;
-  deleted_at: Timestamp | null;
+  email: string;
   first_name: string | null;
   last_name: string | null;
-  email: string;
   role: Generated<UserRoleType>;
+  created_at: Generated<Timestamp>;
+  updated_at: Generated<Timestamp>;
+  deleted_at: Timestamp | null;
+  last_login_at: Timestamp | null;
+  email_verified_at: Timestamp | null;
 };
 export type DB = {
   users: users;
