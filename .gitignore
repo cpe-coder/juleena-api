@@ -47,3 +47,5 @@ volumes/
 
 .DS_Store
 *.tsbuildinfo
+
+migrations/
