@@ -1,4 +1,4 @@
-import type { DB, UserRoleType, users } from './types.js';
+import type { DB, UserRoleType, users } from './types';
 
 type OverrideCommonFields<TTable> = Omit<
   TTable,

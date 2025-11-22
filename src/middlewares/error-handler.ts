@@ -1,6 +1,6 @@
-import type { HonoEnv } from '@/types/hono.js';
-import { makeError } from '@/utils/errors.js';
-import { logger } from '@/utils/logger.js';
+import type { HonoEnv } from '@/types/hono';
+import { makeError } from '@/utils/errors';
+import { logger } from '@/utils/logger';
 import type { Context } from 'hono';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

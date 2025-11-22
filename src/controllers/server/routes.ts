@@ -1,6 +1,6 @@
-import type { HonoEnv } from '@/types/hono.js';
+import type { HonoEnv } from '@/types/hono';
 import { OpenAPIHono } from '@hono/zod-openapi';
-import { getServerDateTimeRoute, getServerDateTimeRouteHandler } from './get-server-date-time.js';
+import { getServerDateTimeRoute, getServerDateTimeRouteHandler } from './get-server-date-time';
 
 const serverRoutes = new OpenAPIHono<HonoEnv>().openapi(
   getServerDateTimeRoute,

@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
 import { z } from 'zod';
-import { STAGES } from './constants/env.js';
+import { STAGES } from './constants/env';
 
 config();
 

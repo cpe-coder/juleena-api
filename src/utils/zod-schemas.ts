@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { isValidStringDecimalNumber } from './number.js';
+import { isValidStringDecimalNumber } from './number';
 
 export const emailSchema = z
   .string()

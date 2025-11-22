@@ -1,5 +1,5 @@
-import serverRoutes from './server/routes.js';
-import usersRoutes from './users/routes.js';
+import serverRoutes from './server/routes';
+import usersRoutes from './users/routes';
 
 export const routes = [serverRoutes, usersRoutes] as const;
 

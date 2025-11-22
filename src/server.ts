@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server';
-import app from './app.js';
-import { envConfig } from './env.js';
-import { logger } from './utils/logger.js';
+import app from './app';
+import { envConfig } from './env';
+import { logger } from './utils/logger';
 
 const mainAppEntry = app;
 

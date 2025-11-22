@@ -1,13 +1,13 @@
 import { swaggerUI } from '@hono/swagger-ui';
 import { OpenAPIHono } from '@hono/zod-openapi';
 import { logger } from 'hono/logger';
-import { STAGES } from './constants/env.js';
-import { routes } from './controllers/routes.js';
-import { schemas } from './data/schema.js';
-import { envConfig } from './env.js';
+import { STAGES } from './constants/env';
+import { routes } from './controllers/routes';
+import { schemas } from './data/schema';
+import { envConfig } from './env';
 // import { errorHandlerMiddleware } from './middlewares/error-handler.js';
-import { setUpDbClientMiddleware } from './middlewares/set-up-db-client.js';
-import type { HonoEnv } from './types/hono.js';
+import { setUpDbClientMiddleware } from './middlewares/set-up-db-client';
+import type { HonoEnv } from './types/hono';
 
 const app = new OpenAPIHono<HonoEnv>();
 

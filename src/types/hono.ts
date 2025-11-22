@@ -1,6 +1,6 @@
-import type { DbClient } from '@/db/create-db-client.js';
+import type { DbClient } from '@/db/create-db-client';
 import type { RouteConfig, RouteHandler } from '@hono/zod-openapi';
-import type { Session } from './auth.js';
+import type { Session } from './auth';
 
 export type HonoEnv = {
   Variables: {

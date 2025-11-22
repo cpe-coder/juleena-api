@@ -1,9 +1,9 @@
-import { envConfig, isTest } from '@/env.js';
-import { ForbiddenError } from '@/utils/errors.js';
+import { envConfig, isTest } from '@/env';
+import { ForbiddenError } from '@/utils/errors';
 import { Kysely, PostgresDialect } from 'kysely';
 import pg from 'pg';
 
-import type { KyselySchema } from './schema.js';
+import type { KyselySchema } from './schema';
 
 export function createDbClient() {
   if (isTest())

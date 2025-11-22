@@ -15,6 +15,7 @@
     "Kysely",
     "libc",
     "Millis",
+    "nodenext",
     "openapi",
     "PGADMIN",
     "pino",

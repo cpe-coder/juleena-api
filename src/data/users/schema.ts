@@ -1,6 +1,6 @@
-import type { User } from '@/db/schema.js';
-import { UserRoleType } from '@/db/types.js';
-import { emailSchema } from '@/utils/zod-schemas.js';
+import type { User } from '@/db/schema';
+import { UserRoleType } from '@/db/types';
+import { emailSchema } from '@/utils/zod-schemas';
 import { z } from '@hono/zod-openapi';
 
 export const userSchemaObject = {

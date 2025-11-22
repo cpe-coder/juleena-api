@@ -1,5 +1,5 @@
-import type { DbClient } from '@/db/create-db-client.js';
-import { formatDateToISO } from '@/utils/date.js';
+import type { DbClient } from '@/db/create-db-client';
+import { formatDateToISO } from '@/utils/date';
 import { sql } from 'kysely';
 
 export type GetServerDateTimeDataArgs = {
