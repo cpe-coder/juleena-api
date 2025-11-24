@@ -1,23 +1,22 @@
 import { swaggerUI } from '@hono/swagger-ui';
 import { OpenAPIHono } from '@hono/zod-openapi';
 import { logger } from 'hono/logger';
+import { version } from '../package.json';
 import { STAGES } from './constants/env';
 import { routes } from './controllers/routes';
 import { schemas } from './data/schema';
 import { envConfig } from './env';
-// import { errorHandlerMiddleware } from './middlewares/error-handler.js';
 import { setUpDbClientMiddleware } from './middlewares/set-up-db-client';
 import type { HonoEnv } from './types/hono';
 
 const app = new OpenAPIHono<HonoEnv>();
 
 if (envConfig.STAGE !== STAGES.Prod) {
-  /* API Docs */
   app.get('/openapi.json', c => {
     const doc = app.getOpenAPIDocument({
       openapi: '3.0.0',
       info: {
-        version: '0.0.1',
+        version,
         title: `${envConfig.STAGE.toUpperCase()} API`,
         description: 'API Documentation',
       },
